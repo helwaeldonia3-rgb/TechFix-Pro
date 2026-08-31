@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="TechFix.Pro.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TechFix.Pro">
+
+    <Application.Resources>
+        <!-- Application theme resources are defined here. Replace the defaults with your own resources. -->
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <!-- Accent Color -->
+                    <Color x:Key="SystemAccentColor">#0078D4</Color>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <Color x:Key="SystemAccentColorLight1">#40B4FF</Color>
+                    <Color x:Key="SystemAccentColorLight2">#74D6FF</Color>
+                    <Color x:Key="SystemAccentColorLight3">#A8E6FF</Color>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <Color x:Key="SystemAccentColorDark1">#005A9E</Color>
+                    <Color x:Key="SystemAccentColorDark2">#004578</Color>
+                    <Color x:Key="SystemAccentColorDark3">#002E50</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

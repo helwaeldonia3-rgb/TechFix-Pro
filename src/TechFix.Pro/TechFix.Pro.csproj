@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWinUI>true</UseWinUI>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishProfile>SelfContained</PublishProfile>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>TechFix.Pro</RootNamespace>
+    <AssemblyName>TechFix.Pro</AssemblyName>
+    <Version>1.0.0</Version>
+    <Authors>TechFix Pro Team</Authors>
+    <Description>Professional Desktop Application for Smartphone Maintenance Technicians</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.231219000" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI3" Version="2.0.9" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TechFix.Pro.Core\TechFix.Pro.Core.csproj" />
+    <ProjectReference Include="..\TechFix.Pro.Services\TechFix.Pro.Services.csproj" />
+    <ProjectReference Include="..\TechFix.Pro.Data\TechFix.Pro.Data.csproj" />
+  </ItemGroup>
+</Project>
