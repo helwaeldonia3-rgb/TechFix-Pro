@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TechFix.Pro.Views.DashboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="20" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Dashboard" FontSize="28" FontWeight="Bold" />
+
+        <!-- Refresh Button -->
+        <Button Grid.Row="1" Content="Refresh Device Info" Padding="10" />
+
+        <!-- Device Info Card -->
+        <ScrollView Grid.Row="2">
+            <StackPanel Spacing="10">
+                <!-- Device Status -->
+                <Border Background="{ThemeResource CardBackgroundFillColorDefault}" CornerRadius="8" Padding="16">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Device Status" FontSize="16" FontWeight="Bold" />
+                        <TextBlock Text="Status: Connected" Foreground="{ThemeResource TextFillColorSecondary}" />
+                        <TextBlock Text="Device: Not Connected" Foreground="{ThemeResource TextFillColorTertiary}" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Recent Operations Log -->
+                <Border Background="{ThemeResource CardBackgroundFillColorDefault}" CornerRadius="8" Padding="16">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Recent Operations" FontSize="16" FontWeight="Bold" />
+                        <ListView SelectionMode="None" MaxHeight="300">
+                            <ListViewItem>
+                                <TextBlock Text="[INFO] Device connected" Foreground="{ThemeResource TextFillColorSecondary}" />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock Text="[WARNING] Driver missing" Foreground="{ThemeResource TextFillColorTertiary}" />
+                            </ListViewItem>
+                        </ListView>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollView>
+    </Grid>
+</Page>

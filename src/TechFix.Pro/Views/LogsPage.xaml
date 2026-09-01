@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TechFix.Pro.Views.LogsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="20" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="System Logs" FontSize="28" FontWeight="Bold" />
+
+        <!-- Action Buttons -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="10">
+            <TextBox PlaceholderText="Search logs..." Width="300" />
+            <Button Content="Export CSV" Padding="10" />
+            <Button Content="Export TXT" Padding="10" />
+            <Button Content="Clear Old Logs" Padding="10" />
+        </StackPanel>
+
+        <!-- Logs List -->
+        <ScrollView Grid.Row="2">
+            <ListView SelectionMode="None">
+                <ListViewItem>
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <TextBlock Text="[2024-08-31 10:30:45] [INFO] Device connected" FontFamily="Consolas" />
+                        <TextBlock Text="Device: Samsung Galaxy S21 | Serial: ABC123456" FontSize="12" Foreground="{ThemeResource TextFillColorSecondary}" />
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem>
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <TextBlock Text="[2024-08-31 10:29:12] [WARNING] Driver missing" FontFamily="Consolas" />
+                        <TextBlock Text="Platform: Qualcomm | Missing: USB Driver" FontSize="12" Foreground="{ThemeResource TextFillColorSecondary}" />
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem>
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <TextBlock Text="[2024-08-31 10:25:30] [ERROR] Connection timeout" FontFamily="Consolas" />
+                        <TextBlock Text="Device: Unknown | Error Code: CONN_TIMEOUT" FontSize="12" Foreground="{ThemeResource TextFillColorSecondary}" />
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </ScrollView>
+    </Grid>
+</Page>

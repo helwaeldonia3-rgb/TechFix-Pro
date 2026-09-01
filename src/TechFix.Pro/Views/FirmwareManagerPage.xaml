@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TechFix.Pro.Views.FirmwareManagerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="20" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Firmware Manager" FontSize="28" FontWeight="Bold" />
+
+        <!-- Action Buttons -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="10">
+            <Button Content="Add Firmware" Padding="10" />
+            <Button Content="Verify Selected" Padding="10" />
+            <Button Content="Delete Selected" Padding="10" />
+        </StackPanel>
+
+        <!-- Firmware List -->
+        <ScrollView Grid.Row="2">
+            <ListView SelectionMode="Single" MaxHeight="600">
+                <ListViewItem>
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <TextBlock Text="Samsung_Galaxy_S21_Firmware.zip" FontWeight="Bold" />
+                        <TextBlock Text="Manufacturer: Samsung" FontSize="12" />
+                        <TextBlock Text="Model: Galaxy S21" FontSize="12" />
+                        <TextBlock Text="Version: 12.0.1" FontSize="12" />
+                        <TextBlock Text="Size: 2.4 GB" FontSize="12" />
+                        <TextBlock Text="Status: Verified ✓" FontSize="12" Foreground="Green" />
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </ScrollView>
+    </Grid>
+</Page>

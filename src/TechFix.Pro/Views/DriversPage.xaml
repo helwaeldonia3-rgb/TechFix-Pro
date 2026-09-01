@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="TechFix.Pro.Views.DriversPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="20" RowSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Driver Management" FontSize="28" FontWeight="Bold" />
+
+        <!-- Platform Selection -->
+        <ComboBox Grid.Row="1" PlaceholderText="Select Platform">
+            <ComboBoxItem>Qualcomm Snapdragon</ComboBoxItem>
+            <ComboBoxItem>MediaTek</ComboBoxItem>
+            <ComboBoxItem>Samsung Exynos</ComboBoxItem>
+            <ComboBoxItem>Apple</ComboBoxItem>
+        </ComboBox>
+
+        <!-- Driver Status -->
+        <ScrollView Grid.Row="2">
+            <StackPanel Spacing="20">
+                <!-- Installed Drivers -->
+                <StackPanel Spacing="10">
+                    <TextBlock Text="Installed Drivers" FontSize="18" FontWeight="Bold" Foreground="Green" />
+                    <ListView SelectionMode="None">
+                        <ListViewItem>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <TextBlock Text="✓" Foreground="Green" FontWeight="Bold" />
+                                <StackPanel>
+                                    <TextBlock Text="Qualcomm USB Driver" FontWeight="Bold" />
+                                    <TextBlock Text="Version: 1.0.0" FontSize="12" />
+                                </StackPanel>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+
+                <!-- Missing Drivers -->
+                <StackPanel Spacing="10">
+                    <TextBlock Text="Missing Drivers" FontSize="18" FontWeight="Bold" Foreground="Orange" />
+                    <ListView SelectionMode="None">
+                        <ListViewItem>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <TextBlock Text="✗" Foreground="Orange" FontWeight="Bold" />
+                                <StackPanel>
+                                    <TextBlock Text="MediaTek Flash Tool Driver" FontWeight="Bold" />
+                                    <TextBlock Text="Status: Missing" FontSize="12" />
+                                </StackPanel>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+            </StackPanel>
+        </ScrollView>
+    </Grid>
+</Page>
